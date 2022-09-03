@@ -2,7 +2,7 @@ select
     'Washington 211' as contributor,
     agency_id as organization_id,
     service_id as id,
-    servicesystem_dateoflastcompleteupdate as last_updated,
+    servicesystem_dateoflastcompleteupdate as assured_date,
     serviceoption_status as status,
     servicesystem_name as name,
     servicecustom_wa211serviceaffectedbycovid19 as emergency_information,

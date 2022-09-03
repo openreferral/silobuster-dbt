@@ -2,8 +2,7 @@ with o as (
     select
         id,
         source_id
-    from {{ ref('organization') }}
-    where contributor = 'Washington 211'
+    from {{ ref('fin_wa_organization') }}
 )
 
 select
