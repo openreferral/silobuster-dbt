@@ -1,13 +1,12 @@
-Welcome to your new dbt project!
+# SiloBuster! DBT
+A straighforward DBT project that standardizes three source data sets and munges them into common HSDS tables (WIP).
 
-### Using the starter project
+Moving quick and dirty to a certain degree in order to meet the real time demands of a hackathon.
 
-Try running the following commands:
-- dbt run
-- dbt test
+## Organization.
+Generally following DBT best practices for model organization (https://docs.getdbt.com/guides/best-practices/how-we-structure/1-guide-overview), but wiht an extra layer of folders identifying the different contributor data sets.
 
-
-### Resources:
+## Resources for DBT:
 - Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
 - Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
 - Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
