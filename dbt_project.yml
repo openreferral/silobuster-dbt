@@ -36,3 +36,5 @@ models:
     +materialized: table
     wa211:
       +materialized: ephemeral
+    within_reach:
+      +materialized: ephemeral

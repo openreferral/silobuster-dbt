@@ -9,6 +9,16 @@ sources:
       - name: wa211_program
       - name: wa211_service
       - name: wa211_site
-
-models:
-  - name: agency
+      - name: within_contact
+      - name: within_language
+      - name: within_location
+      - name: within_organization
+      - name: within_payment_accepted
+      - name: within_phone
+      - name: within_physical_addresse
+      - name: within_required_document
+      - name: within_schedule
+      - name: within_service
+      - name: within_service_area
+      - name: within_service_attribute
+      - name: within_taxonomy_term
