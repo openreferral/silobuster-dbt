@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: silobuster_dbt
+    database: defaultdb
+    schema: public
+    tables:
+      - name: wa211_agency
+      - name: wa211_program
+      - name: wa211_service
+      - name: wa211_site
+
+models:
+  - name: agency
