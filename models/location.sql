@@ -1,24 +1,27 @@
-with wa_o as (
-    select
-        id,
-        source_id
-    from {{ ref('organization') }}
-    where contributor = 'Washington 211'
-),
+select
+    id,
+    source_id,
+    null as alternate_name,
+    assured_date,
+    contributor,
+    null as description,
+    null as latitude,
+    null as longitude,
+    name,
+    organization_id
+from {{ ref('fin_wa_location') }}
 
-wa as (
-    select
-        {{ dbt_utils.surrogate_key([
-            'wa.contributor',
-            'wa.id'
-        ]) }} as id,
-        wa.id as source_id,
-        wa.contributor,
-        wa_o.id as organization_id,
-        wa.last_updated,
-        wa.name
-    from {{ ref('stg_wa_site') }} wa
-    join wa_o on wa_o.source_id = wa.organization_id
-)
+union all
 
-select * from wa
+select
+    id,
+    source_id,
+    alternate_name,
+    null as assured_date,
+    contributor,
+    description,
+    latitude,
+    longitude,
+    name,
+    organization_id
+from {{ ref('fin_wr_location') }}

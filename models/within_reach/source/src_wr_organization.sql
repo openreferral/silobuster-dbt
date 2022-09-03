@@ -1,6 +1,6 @@
 select
     'WithinReach' as contributor,
-    id,
+    id::varchar,
     name,
     alternate_name,
     description,

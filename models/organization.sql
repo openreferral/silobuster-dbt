@@ -4,7 +4,7 @@ with wa as (
             'contributor',
             'id'
         ]) }} as id,
-        cast(id as varchar) as source_id,
+        id as source_id,
         assured_date,
         contributor,
         description,

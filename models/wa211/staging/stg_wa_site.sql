@@ -2,7 +2,7 @@ select
     'Washington 211' as contributor,
     agency_id as organization_id,
     site_id as id,
-    sitesystem_dateoflastcompleteupdate as last_updated,
+    sitesystem_dateoflastcompleteupdate as assured_date,
     siteoption_status as status,
     sitesystem_name as name,
     sitesystem_hoursofoperation as schedule_description,
