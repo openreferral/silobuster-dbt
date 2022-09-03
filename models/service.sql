@@ -23,6 +23,14 @@ p as (
         last_updated,
         name
     from {{ ref('stg_wa_program') }}
+),
+
+o as (
+    select
+        id,
+        source_id
+    from {{ ref('organization') }}
+    where contributor = 'Washington 211'
 )
 
 select
@@ -32,7 +40,7 @@ select
         'p.id'
     ]) }} as id,
     s.id as source_id,
-    s.organization_id,
+    o.id as organization_id,
     s.alternate_name,
     s.emergency_information,
     s.short_description,
@@ -45,3 +53,4 @@ select
     p.fees
 from s
 join p on s.program_id = p.id
+join o on o.source_id = s.organization_id

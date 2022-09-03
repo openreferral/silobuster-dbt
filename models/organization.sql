@@ -10,6 +10,7 @@ with wa as (
         description,
         name,
         status,
+        null as tax_id,
         url
     from {{ ref('stg_wa_agency') }}
 ),
@@ -26,6 +27,7 @@ wr as (
         description,
         name,
         status,
+        tax_id,
         url
     from {{ ref('src_wr_organization') }}
 )
