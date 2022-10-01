@@ -22,3 +22,11 @@ sources:
       - name: within_service_area
       - name: within_service_attribute
       - name: within_taxonomy_term
+      - name: what_contact
+      - name: what_location
+      - name: what_organization
+      - name: what_phone
+      - name: what_physical_addresse
+      - name: what_schedule
+      - name: what_service
+      - name: what_taxonomy_term
