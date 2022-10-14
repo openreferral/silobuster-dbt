@@ -38,3 +38,5 @@ models:
       +materialized: ephemeral
     within_reach:
       +materialized: ephemeral
+    whatcom:
+      +materialized: ephemeral
