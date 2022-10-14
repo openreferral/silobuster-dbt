@@ -1,11 +1,10 @@
 select
-id,
+    id,
     null as accreditations,
     organization_id,
     alternate_name,
     application_process,
     assured_date,
-    contributor,
     description,
     document,
     email,
@@ -15,19 +14,19 @@ id,
     null as licenses,
     name,
     null as status,
-    url
+    url,
+    source_id
 from {{ ref('fin_wa_service') }}
 
 union all
 
 select
     id,
-    organization_id,
     accreditations,
+    organization_id,
     alternate_name,
     application_process,
     null as assured_date,
-    contributor,
     description,
     null as document,
     email,
@@ -37,5 +36,29 @@ select
     licenses,
     name,
     status,
-    url
+    url,
+    source_id
 from {{ ref('fin_wr_service') }}
+
+union all
+
+select 
+    id,
+    accreditations,
+    organization_id,
+    alternate_name,
+    application_process,
+    null as assured_date,
+    description,
+    null as document,
+    email,
+    null as emergency_information,
+    fees,
+    null as interpretation_services,
+    licenses,
+    name,
+    status,
+    url,
+    source_id
+
+from {{ ref('fin_what_service') }}

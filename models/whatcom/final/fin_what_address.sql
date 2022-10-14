@@ -1,5 +1,5 @@
 -- uncomment below to see output as a view
-{{ config(materialized='view')}}
+-- {{ config(materialized='view')}}
 
 select
       {{dbt_utils.surrogate_key([
